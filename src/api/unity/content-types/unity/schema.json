@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unities",
+  "info": {
+    "singularName": "unity",
+    "pluralName": "unities",
+    "displayName": "Unity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "heroes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hero.hero",
+      "mappedBy": "unity"
+    }
+  }
+}
